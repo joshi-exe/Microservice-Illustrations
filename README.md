@@ -19,7 +19,7 @@ This project facilitates:
 At an outset this project contains the following:
 - Netflix eureka server
 - Discovery clients
-- Gateway
+- API Gateway
 - DB interaction services
 - Client services to get data from DB services
 - JSP pages for UI
