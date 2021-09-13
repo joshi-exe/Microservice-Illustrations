@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "d6d05e8e-44d7-4e19-8213-4738a9daa6c5",
+		"name": "microservice-dbservice-requests",
+		"description": "All sample DB-related APIs for DB-Service. Contains and facilitates creating users, adding and buying products, updating details, and other basic CRUD ops.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "saveUserWithProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"confirmPassword\": \"pass\",\r\n  \"products\": [\r\n    {\r\n      \"qty\": 3,\r\n      \"name\": \"product3\",\r\n      \"origin\": \"origin3\"\r\n    }\r\n  ],\r\n  \"userName\": \"user_test_w_product\",\r\n  \"password\": \"pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2222/api/users/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"users",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "someUser/someProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/users/:uid/products/:pid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"users",
+						":uid",
+						"products",
+						":pid"
+					],
+					"variable": [
+						{
+							"key": "uid",
+							"value": "63073"
+						},
+						{
+							"key": "pid",
+							"value": "26514"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveUserWithoutProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"confirmPassword\": \"pass\",\r\n  \"userName\": \"user_test_wo_product\",\r\n  \"password\": \"pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2222/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/users/:uid/products/:pid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"users",
+						":uid",
+						"products",
+						":pid"
+					],
+					"variable": [
+						{
+							"key": "uid",
+							"value": "63073"
+						},
+						{
+							"key": "pid",
+							"value": "26514"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/users/:uid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"users",
+						":uid"
+					],
+					"variable": [
+						{
+							"key": "uid",
+							"value": "63073"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "defaultHelloPage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Yash",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Yash",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "someUser/allProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/users/:uid/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"users",
+						":uid",
+						"products"
+					],
+					"variable": [
+						{
+							"key": "uid",
+							"value": "55277"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"qty\": 5,\r\n    \"name\": \"product5\",\r\n    \"origin\": \"origin5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2222/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Yash",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buyProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/products/:pid/buy?user_id=72181",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"products",
+						":pid",
+						"buy"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "72181"
+						}
+					],
+					"variable": [
+						{
+							"key": "pid",
+							"value": "4651"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 72181,\r\n    \"userName\": \"user_test_wo_product_updt\",\r\n    \"password\": \"newPass\",\r\n    \"confirmPassword\": \"newPass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2222/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/users/:uid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"users",
+						":uid"
+					],
+					"variable": [
+						{
+							"key": "uid",
+							"value": "1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/products/:pid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"products",
+						":pid"
+					],
+					"variable": [
+						{
+							"key": "pid",
+							"value": "1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1234,\r\n    \"name\": \"product_updt\",\r\n    \"qty\": 1,\r\n    \"origin\": \"origin_updt\",\r\n    \"user\": {\r\n        \"id\": 72181\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2222/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"test\",\r\n    \"password\": \"pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2222/api/users/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"users",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allProductsWithUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2222/api/products/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"products",
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Yash",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "User ID",
+			"value": "63073"
+		}
+	]
+}
