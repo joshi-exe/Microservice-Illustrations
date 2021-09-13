@@ -50,7 +50,7 @@ Requirements to set-up and run the project:
 
 <br>
 
-#### This project is only for learning purpose. I don't own any resources like images used in the development of this project, and have used only for learning purposes. Whole code is written by me and solely belongs to me. This project is kept open-source to spread the knowledge and further support learning for other early professionals and students. I shall not be responsible in case of commercial redistribution, mishandling, misuse of data or any resource which belongs to this project. I have used Java 11 while development of this project which is limited to learning and development purposes. I have also used the following image as icon. The image is freely available online and I don't own the image. To credit the author for the image, the image can be accessed [here](https://www.flaticon.com/free-icon/online-shop_4689690).
+#### This project is only for learning purpose. I don't own any resources like images used in the development of this project, and have used only for learning purposes. Whole code is written by me and solely belongs to me. This project is kept open-source to spread the knowledge and further support learning for other early professionals and students. I shall not be responsible in case of commercial redistribution, mishandling, misuse of data or any resource which belongs to this project. I have used Java 11 while development of this project which is limited to learning and development purposes. I have also used the following image as icon. The image is freely available online and I don't own the image. To credit the author for the image, the image can be accessed from [here](https://www.flaticon.com/free-icon/online-shop_4689690).
 
 <br>
 
